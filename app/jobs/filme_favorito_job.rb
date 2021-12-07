@@ -1,6 +1,6 @@
 class FilmeFavoritoJob < ApplicationJob
   require 'csv'
-  queue_as :default
+  queue_as :relatorios
 
   def perform
     CSV.open(Rails.root.join("public", "favoritos.csv"), "wb") do |csv|
